@@ -1,0 +1,117 @@
+<!--Principal -->
+<div data-role="page" id="main">
+  <div data-role="header" data-position="fixed" >
+    <h1>Demo</h1>
+  </div>
+  <div role="main" class="ui-content" >
+    <h2 align="center" >Juana declerc API</h2>
+
+    <ul data-role="listview">
+          <li><a href="#splash" class="ui-btn ui-icon-calendar ui-btn-icon-right">Eventos</a></li>
+          <li><a href="#historia"  class="ui-btn ui-icon-star ui-btn-icon-right">Historias</a></li>
+          <li><a href="#usuario"  class="ui-btn ui-icon-star ui-btn-icon-right">Crear Usuario</a></li>
+          <li><a href="#">List Item</a></li>
+        </ul>
+
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+    <h5 align="center">Derechos reservados</h5>
+  </div>
+</div>
+</div>
+
+
+<!--Eventos -->
+<div data-role="page" id="splash">
+  <div data-role="header" data-position="fixed" >
+    <h1>Demo</h1>
+  </div>
+  <div role="main" class="ui-content" >
+    <h2>Listar Eventos</h2>
+  <ul id="splash_list" data-role="listview" data-inset="true">  </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li>
+<a href="#main">Home</a>
+        </li>
+        <li>
+<a href="#itemCreate">Nuevo</a>
+        </li>
+      </ul>
+  </div>
+  </div>
+</div>
+
+<!--Nuevo evento-->
+<div data-role="page" id="itemCreate">
+  <div data-role="header" data-position="fixed" >
+    <h1>Demo</h1>
+  </div>
+  <div role="main" class="ui-content" >
+    <h2>Crear Evento</h2>
+<form id="Evento-create-form" data-position="fixed">
+  <div data-role="navbar">
+  <label for="Evento-txtNombre">Evento:</label>
+  <input type="text" id="Evento-txtNombre"
+  placeholder="nombre evento..." name="txtNombre" />
+  <label for="Evento-estado">Estado</label>
+  <select id="Evento-cmbEstado" name="cmbEstado">
+<option value="ACT">Activo</option>
+<option value="FIN">Finalizado</option>
+  </select>
+  <label for="Evento-Fecha">Fecha:</label>
+  <input type="date" id="Evento-Fecha" name="fecha" value="">
+  <label for="Evento-create-Hora">Hora:</label>
+  <input type="time" id="Evento-Hora" name="hora" value="">
+  <label for="Evento-Lugar">Lugar:</label>
+  <input type="text" id="Evento-Lugar"
+  placeholder="Lugar evento..." name="Lugar" />
+  <button id="Evento-send" type="button" >Guardar</button>
+</div>
+</form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li>
+<a href="#main">Home</a>
+        </li>
+        <li>
+<a href="#splash">Eventos</a>
+        </li>
+      </ul>
+  </div>
+  </div>
+</div>
+<!--Nuevo Usuario-->
+<div data-role="page" id="usuario">
+  <div data-role="header" data-position="fixed" >
+    <h1>Crear Nuevo usuario </h1>
+  </div>
+  <div role="main" class="ui-content" >
+    <h2 align="center" > prueba </h2>
+
+    <form id="Evento-create-user" data-position="fixed">
+      <label for="usuario-txtCorreo">Correo electronico</label>
+      <input type="email" id="usuario-txtCorreo" name="txtCorreo" value="" placeholder="Ingrese Correo de Usuario">
+      <label for="usuario-txtPass">Contraseña</label>
+      <input type="password" id="usuario-txtPass" name="txtPass" value="" placeholder="Ingrese Contraseña">
+      <button type="button" id="usuario-send" >Enviar</button>
+    </form>
+
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+      <li>
+<a href="#main">Home</a>
+      </li>
+
+
+      </ul>
+  </div>
+</div>
+</div>
