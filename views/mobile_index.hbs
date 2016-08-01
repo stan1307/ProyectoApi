@@ -1,11 +1,33 @@
 <!--Principal -->
-<div data-role="page" id="main">
+
+<div data-role="page" id="principal">
+  <div data-role="header" data-position="fixed" >
+    <h1>Juana Leclerc</h1>
+  </div>
+  <div role="main" class="ui-content" >
+    <h2 align="right" ><a id="txtIngresar" href="#login">Ingresar</a></h2>
+    <h2 align="right" ><a id="txtIngresar" href="#login" hidden="false">cerrar</a></h2>
+
+    <ul data-role="listview">
+          <li><a href="#splash" class="ui-btn ui-icon-calendar ui-btn-icon-right">Eventos</a></li>
+          <li><a href="#historia"  class="ui-btn ui-icon-star ui-btn-icon-right">Historias</a></li>
+        </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+    <h5 align="center">Derechos reservados</h5>
+  </div>
+</div>
+</div>
+<!--Administrador  -->
+<div data-role="page" id="adminMain">
   <div data-role="header" data-position="fixed" >
     <h1>Demo</h1>
   </div>
+  <h2 align="center" >Bienvenido <span id="txtUsuario">hey</span></h2>
   <div role="main" class="ui-content" >
     <h2 align="center" >Juana declerc API</h2>
-
+    <button id="btnCerrar"type="button" name="button">Cerrar Session</button>
     <ul data-role="listview">
           <li><a href="#splash" class="ui-btn ui-icon-calendar ui-btn-icon-right">Eventos</a></li>
           <li><a href="#historia"  class="ui-btn ui-icon-star ui-btn-icon-right">Historias</a></li>
@@ -51,6 +73,7 @@
     <h1>Demo</h1>
   </div>
   <div role="main" class="ui-content" >
+    <h2 align="center" >Bienvenido <span id="txtUsuarioI">hey</span></h2>
     <h2>Crear Evento</h2>
 <form id="Evento-create-form" data-position="fixed">
   <div data-role="navbar">
@@ -94,7 +117,7 @@
   <div role="main" class="ui-content" >
     <h2 align="center" > prueba </h2>
 
-    <form id="Evento-create-user" data-position="fixed">
+    <form id="usuario-form" data-position="fixed">
       <label for="usuario-txtCorreo">Correo electronico</label>
       <input type="email" id="usuario-txtCorreo" name="txtCorreo" value="" placeholder="Ingrese Correo de Usuario">
       <label for="usuario-txtPass">Contraseña</label>
@@ -111,6 +134,32 @@
       </li>
 
 
+      </ul>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="login">
+  <div data-role="header" data-position="fixed" >
+    <h1>Ingresar</h1>
+  </div>
+  <div role="main" class="ui-content" >
+
+    <form id="log-form" data-position="fixed">
+      <label for="log-txtCorreo">Correo electronico</label>
+      <input type="email" id="log-txtCorreo" name="txtCorreo" value="" placeholder="Ingrese Correo de Usuario">
+      <label for="usuario-txtPass">Contraseña</label>
+      <input type="password" id="log-txtPass" name="txtPass" value="" placeholder="Ingrese Contraseña">
+      <button type="button" id="log-send" >Enviar</button>
+    </form>
+
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+      <li>
+<a href="#main">Home</a>
+      </li>
       </ul>
   </div>
 </div>

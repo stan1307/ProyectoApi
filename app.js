@@ -4,11 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 
 
 function initApp(db){
-
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
+app.use(session({secret:"khsdfsdfsdfdfhksadhfhksdf9400",resave:false,saveUninitialized:true}));
 app.use(express.static(path.join(__dirname, 'public')));
-
 var routes = require('./routes/index')(db);
 var users = require('./routes/users');
 var api = require('./routes/api')(db);
